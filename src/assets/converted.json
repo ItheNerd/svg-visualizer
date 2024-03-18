@@ -1,0 +1,208 @@
+{
+  "keys": [
+    {
+      "id": "d0",
+      "forElement": "node",
+      "attrType": "int",
+      "attrName": "zOrder",
+      "uri": "http://www.yworks.com/xml/yfiles-z-order/1.0/zOrder"
+    },
+    {
+      "id": "d1",
+      "forElement": "node",
+      "attrType": "boolean",
+      "attrName": "Expanded",
+      "uri": "http://www.yworks.com/xml/yfiles-common/2.0/folding/Expanded",
+      "defaultValue": "true"
+    },
+    {
+      "id": "d2",
+      "forElement": "node",
+      "attrType": "string",
+      "attrName": "url"
+    },
+    {
+      "id": "d3",
+      "forElement": "node",
+      "attrType": "string",
+      "attrName": "description"
+    },
+    {
+      "id": "d4",
+      "forElement": "node",
+      "attrName": "NodeLabels",
+      "uri": "http://www.yworks.com/xml/yfiles-common/2.0/NodeLabels"
+    },
+    {
+      "id": "d5",
+      "forElement": "node",
+      "attrName": "NodeGeometry",
+      "uri": "http://www.yworks.com/xml/yfiles-common/2.0/NodeGeometry"
+    },
+    {
+      "id": "d6",
+      "forElement": "all",
+      "attrName": "UserTags",
+      "uri": "http://www.yworks.com/xml/yfiles-common/2.0/UserTags"
+    },
+    {
+      "id": "d7",
+      "forElement": "node",
+      "attrName": "NodeStyle",
+      "uri": "http://www.yworks.com/xml/yfiles-common/2.0/NodeStyle"
+    },
+    {
+      "id": "d8",
+      "forElement": "node",
+      "attrName": "NodeViewState",
+      "uri": "http://www.yworks.com/xml/yfiles-common/2.0/folding/1.1/NodeViewState"
+    },
+    {
+      "id": "d9",
+      "forElement": "edge",
+      "attrType": "string",
+      "attrName": "url"
+    },
+    {
+      "id": "d10",
+      "forElement": "edge",
+      "attrType": "string",
+      "attrName": "description"
+    },
+    {
+      "id": "d11",
+      "forElement": "edge",
+      "attrName": "EdgeLabels",
+      "uri": "http://www.yworks.com/xml/yfiles-common/2.0/EdgeLabels"
+    },
+    {
+      "id": "d12",
+      "forElement": "edge",
+      "attrName": "EdgeGeometry",
+      "uri": "http://www.yworks.com/xml/yfiles-common/2.0/EdgeGeometry"
+    },
+    {
+      "id": "d13",
+      "forElement": "edge",
+      "attrName": "EdgeStyle",
+      "uri": "http://www.yworks.com/xml/yfiles-common/2.0/EdgeStyle"
+    },
+    {
+      "id": "d14",
+      "forElement": "edge",
+      "attrName": "EdgeViewState",
+      "uri": "http://www.yworks.com/xml/yfiles-common/2.0/folding/1.1/EdgeViewState"
+    },
+    {
+      "id": "d15",
+      "forElement": "port",
+      "attrName": "PortLabels",
+      "uri": "http://www.yworks.com/xml/yfiles-common/2.0/PortLabels"
+    },
+    {
+      "id": "d16",
+      "forElement": "port",
+      "attrName": "PortLocationParameter",
+      "uri": "http://www.yworks.com/xml/yfiles-common/2.0/PortLocationParameter",
+      "defaultValue": "y:FreeNodePortLocationModel.NodeCenterAnchored"
+    },
+    {
+      "id": "d17",
+      "forElement": "port",
+      "attrName": "PortStyle",
+      "uri": "http://www.yworks.com/xml/yfiles-common/2.0/PortStyle",
+      "defaultValue": "y:VoidPortStyle.Instance"
+    },
+    {
+      "id": "d18",
+      "forElement": "port",
+      "attrName": "PortViewState",
+      "uri": "http://www.yworks.com/xml/yfiles-common/2.0/folding/1.1/PortViewState"
+    },
+    {
+      "id": "d19",
+      "attrName": "SharedData",
+      "uri": "http://www.yworks.com/xml/yfiles-common/2.0/SharedData"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n0",
+      "label": "Mr. Bennett",
+      "x": 0,
+      "y": 0,
+      "width": 48,
+      "height": 48,
+      "style": {
+        "asset": "usericon_male4.svg",
+        "clipMode": "outline"
+      },
+      "zOrder": null,
+      "ports": [
+        {
+          "name": "p0"
+        },
+        {
+          "name": "p1"
+        },
+        {
+          "name": "p2"
+        },
+        {
+          "name": "p3"
+        },
+        {
+          "name": "p4"
+        },
+        {
+          "name": "p5"
+        }
+      ]
+    },
+    {
+      "id": "n1",
+      "label": "Mrs. Ross",
+      "x": 31,
+      "y": 126,
+      "width": 48,
+      "height": 48,
+      "style": {
+        "asset": "usericon_female2.svg",
+        "clipMode": "outline"
+      },
+      "zOrder": null,
+      "ports": [
+        {
+          "name": "p0"
+        },
+        {
+          "name": "p1"
+        },
+        {
+          "name": "p2"
+        },
+        {
+          "name": "p3"
+        },
+        {
+          "name": "p4"
+        },
+        {
+          "name": "p5"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0",
+      "source": "n1",
+      "target": "n0",
+      "sourcePort": "p5",
+      "targetPort": "p5",
+      "style": {},
+      "zOrder": null,
+      "expanded": false
+    }
+  ]
+}
