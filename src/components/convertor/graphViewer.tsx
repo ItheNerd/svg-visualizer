@@ -1,34 +1,56 @@
-import { GraphCanvas } from "reagraph";
-const nodes_sample = [
-  {
-    id: "1",
-    label: "1",
-  },
-  {
-    id: "2",
-    label: "2",
-  },
-];
+import { useTheme } from "@/context/ThemeContext";
+import { useEffect, useRef, useState } from "react";
+import {
+  GraphCanvas,
+  GraphCanvasRef,
+  Theme,
+  darkTheme as defaultDarkTheme,
+  lightTheme,
+} from "reagraph";
 
-const edges_sample = [
-  {
-    source: "1",
-    target: "2",
-    id: "1-2",
-    label: "1-2",
+export const darkTheme = {
+  ...defaultDarkTheme,
+  canvas: {
+    background: "hsl(222.2, 84%, 4.9%)",
   },
-  {
-    source: "2",
-    target: "1",
-    id: "2-1",
-    label: "2-1",
-  },
-];
+};
 
-const GraphViewer = ({ nodes = nodes_sample, edges = edges_sample }: any) => {
+const GraphViewer = ({ nodes, edges }: any) => {
+  const { theme } = useTheme();
+  const [graphThemeState, setGraphThemeState] = useState<Theme>(lightTheme);
+  const graphRef = useRef<GraphCanvasRef | null>(null);
+
+  useEffect(() => {
+    setGraphThemeState(getGraphThemeFromTheme(theme));
+  }, [theme]);
+
+  function getGraphThemeFromTheme(theme: string): Theme {
+    if (theme === "light") {
+      return lightTheme;
+    }
+    if (theme === "dark") {
+      return darkTheme;
+    }
+    if (theme === "system") {
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
+        .matches
+        ? "dark"
+        : "light";
+      return systemTheme === "light" ? lightTheme : darkTheme;
+    }
+    return lightTheme;
+  }
+
   return (
     <div className="min-h-96 h-full w-full rounded">
-      <GraphCanvas animated nodes={nodes} edges={edges} />
+      <GraphCanvas
+        ref={graphRef}
+        animated
+        draggable
+        theme={graphThemeState}
+        nodes={nodes}
+        edges={edges}
+      />
     </div>
   );
 };
