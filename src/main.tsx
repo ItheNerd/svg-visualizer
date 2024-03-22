@@ -18,7 +18,7 @@ createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <Router>
       <QueryClientProvider client={queryClient}>
-        <ThemeProvider>
+        <ThemeProvider defaultTheme="system">
           <App />
         </ThemeProvider>
       </QueryClientProvider>
